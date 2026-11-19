@@ -18,13 +18,15 @@ import pandas as pd
 from torch.utils.data import Dataset, DataLoader, WeightedRandomSampler
 from torchvision import transforms, models
 from PIL import Image
+from path_config import load_training_paths
 
 # ------------------------------------------------------------------
 # Configuracion
 # ------------------------------------------------------------------
-DATASET_ROOT = r"C:\Users\lucyc\Documentos\Tesis\Training\dataset_3"
-LOGS_ROOT = r"C:\Users\lucyc\Documentos\Tesis\Training\cats_codes"
-CSV_PATH = os.path.join(DATASET_ROOT, "dataset.csv")
+TRAINING_PATHS = load_training_paths()
+DATASET_ROOT = TRAINING_PATHS["DATASET_ROOT"]
+LOGS_ROOT = TRAINING_PATHS["LOGS_ROOT"]
+CSV_PATH = TRAINING_PATHS["CSV_PATH"]
 
 LOG_DIR = os.path.join(LOGS_ROOT, "Training_4")
 CHECKPOINT_DIR = os.path.join(LOG_DIR, "checkpoints")

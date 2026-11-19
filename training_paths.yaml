@@ -1,0 +1,4 @@
+training_paths:
+  DATASET_ROOT: ""
+  LOGS_ROOT: ""
+  CSV_PATH: ""
